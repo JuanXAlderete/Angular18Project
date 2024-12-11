@@ -1,0 +1,110 @@
+body {
+  padding: 2rem;
+  background-color: whitesmoke;
+  font-family: Roboto;
+}
+
+p-table {
+  .p-datatable-thead{
+    border-radius: 4px 4px 0 0;
+  }
+  .p-datatable-thead > tr > th {
+    background-color: #e6f2f6;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+
+    p-sorticon {
+      color: #346db2;
+      margin-left: 8px;
+    }
+
+    &.p-datatable-column-sorted {
+      background-color: #346db2;
+      color: #fefefe;
+
+      p-sorticon {
+        color: #fefefe;
+      }
+    }
+
+    &.p-datatable-sortable-column:not(.p-datatable-column-sorted):hover {
+      background-color: #346db2;
+
+      p-sorticon {
+        color: #fefefe;
+      }
+    }
+  }
+
+  .p-datatable-tbody > tr > td {
+    background-color: #fefefe;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    border: none;
+  }
+
+  .p-datatable.p-datatable-striped .p-datatable-tbody > tr:nth-child(odd) {
+    background: #fbfbfb;
+
+    td {
+      background: inherit;
+    }
+  }
+
+  .p-paginator {
+    background-color: #fefefe;
+    border-radius: unset;
+    border: none;
+    border-radius: 0 0 4px 4px;
+
+    button {
+      color: #000000;
+
+      &.p-paginator-page:not(.p-disabled):not(
+          .p-paginator-page-selected
+        ):hover {
+        background-color: #e6f2f6;
+        color: #000000;
+      }
+
+      &.p-paginator-next:not(.p-disabled):hover {
+        background-color: #e6f2f6;
+        color: #000000;
+      }
+
+      &.p-paginator-last:not(.p-disabled):hover {
+        background-color: #e6f2f6;
+        color: #000000;
+      }
+    }
+    .p-paginator-page-selected {
+      color: #346db2;
+      background: transparent;
+      font-size: 2rem;
+    }
+    .p-paginator-rpp-dropdown {
+      background-color: #fefefe;
+      span {
+        color: #000000;
+      }
+      .p-select-overlay {
+        background-color: #fefefe;
+
+        .p-select-option {
+          justify-content: center;
+        }
+        .p-select-option:not(.p-select-option-selected):not(
+            .p-disabled
+          ).p-focus {
+          //COLOR DEL HOVER DROPDOWN PAGINATOR
+          background: #ddf7ff;
+        }
+      }
+    }
+  }
+}
